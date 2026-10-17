@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>プライバシーポリシー — Vaultwarden Backups</title>
+<link rel="stylesheet" href="style.css">
+<main>
+<header><p><a href="./">Vaultwarden Backups</a></p><h1>プライバシーポリシー</h1></header>
+<p>本ポリシーは、Fizorが運用する個人用アプリ「Vaultwarden Backups」によるGoogleユーザーデータの取り扱いを説明します。一般利用者のアカウントを募集するサービスではありません。</p>
+<h2>利用するデータと目的</h2>
+<p>本人のGoogle認証を通じて取得したOAuthトークンを、Google Driveへのバックアップ保存・一覧確認・取得と復元確認に使用します。Drive APIでは、対象バックアップの内容と、ファイルID・フォルダID・名前・サイズなどの管理情報を扱います。保存先の空き容量を確認する場合は、Driveの容量情報を読み取ります。</p>
+<p>バックアップにはVaultwardenのデータベース、添付ファイル、Sendのデータ、RSA鍵および復旧に必要な設定を含みます。設定にはSMTP認証情報などが含まれる場合があるため、Driveへの転送前にrclone cryptで暗号化します。マスターパスワードの入力を本アプリが求めることはありません。</p>
+<h2>Google Driveへの権限</h2>
+<p>要求する権限は <code>drive.file</code> のみです。対象はアプリが作成したファイル、または本人がアプリに明示的に共有したファイルに限定します。既存のGoogle Drive全体を閲覧・変更する権限は要求しません。バックアップの世代削除は、対象と条件を本人が確認・承認した後に限って専用フォルダ内で有効化します。</p>
+<h2>保存と保護</h2>
+<p>Google Driveには暗号化したバックアップを保存します。暗号化パスワードとsaltはGoogle Driveへ保存せず、本人が独立した安全な場所に保管します。OAuthトークンとrclone設定は本人の管理端末・サーバー上でアクセス権を制限して保存します。ローカルの一時データやバックアップには平文の構成情報が含まれるため、管理者専用の権限で保護します。</p>
+<h2>共有・販売・AI学習</h2>
+<p>Googleユーザーデータを販売せず、広告配信やAIモデルの学習には使用しません。バックアップ保存先としてGoogle Drive、アプリ実行環境として本人の管理するサーバーを使用します。バックアップデータやOAuthトークンを、これらの運用目的と無関係な第三者へ提供しません。</p>
+<p>本アプリによるGoogle APIから受け取った情報の使用・転送は、<a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>（Limited Useの要件を含む）に従います。</p>
+<h2>保持・削除・アクセスの取消</h2>
+<p>バックアップは本人が復旧のために必要とする期間、または本人が承認した保持方針に従って保存します。本人はGoogle Driveの専用バックアップフォルダと管理端末・サーバー内の対応するデータを削除できます。削除前には復旧用コピーの要否を確認してください。</p>
+<p>Googleアカウントの<a href="https://myaccount.google.com/connections">サードパーティとの接続</a>から、本アプリのアクセスを取り消せます。認可の取消だけでは既存バックアップは削除されません。取り消すと自動バックアップは継続できなくなります。</p>
+<h2>この説明サイト</h2>
+<p>このサイト自体には、独自のアクセス解析、広告、入力フォーム、外部スクリプトを設置しません。配信にはGitHub Pagesを使用し、GitHubが配信・セキュリティのために扱うアクセス情報には、<a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHubのプライバシーステートメント</a>が適用されます。</p>
+<h2>お問い合わせ・変更</h2>
+<p>運営者：Fizor<br>お問い合わせ：<a href="mailto:vaultwarden@fizorr.com">vaultwarden@fizorr.com</a></p>
+<p>取り扱いを変更する場合は、このページを更新します。</p>
+<footer><p>制定・更新日：2026年10月17日</p><p><a href="./">アプリの説明に戻る</a></p></footer>
+</main>
+</html>

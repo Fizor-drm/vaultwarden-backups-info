@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ja">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaultwarden Backups — アプリの説明</title>
+<link rel="stylesheet" href="style.css">
+<main>
+<header><p>Fizor / 個人用バックアップ</p><h1>Vaultwarden Backups</h1></header>
+<p>Fizorが自身のVaultwarden環境を復旧するために使用する、個人用のバックアップアプリです。一般向けの登録サービスではありません。BitwardenおよびGoogleの公式サービスではありません。</p>
+<h2>Google Driveを使う目的</h2>
+<p>本人が管理するVaultwardenのバックアップを、本人のGoogle Drive内の専用フォルダに保存し、必要時に取得・復元するために利用します。バックアップには保管庫のデータベース、添付ファイル、Sendのデータ、復旧に必要な構成を含めます。</p>
+<h2>認証とアクセス範囲</h2>
+<p>転送にはrclone、暗号化にはrclone cryptを使用します。Google OAuthの要求スコープは <code>https://www.googleapis.com/auth/drive.file</code> のみです。このアプリが作成したファイル、または本人がこのアプリに明示的に共有したファイルを対象とし、既存Drive全体へのアクセスを要求しません。</p>
+<h2>バックアップの取り扱い</h2>
+<p>Google Driveへ転送するバックアップは、ファイルの内容・ファイル名・ディレクトリ名を暗号化する構成です。OAuth認証と暗号化設定が完了し、保存・復元の検証を終えてから自動実行を開始します。この説明ページの公開は、バックアップやVaultwarden本体の一般公開を意味しません。</p>
+<nav aria-label="関連情報"><a href="privacy.html">プライバシーポリシー</a></nav>
+<footer><p>運営者：Fizor<br>お問い合わせ：<a href="mailto:vaultwarden@fizorr.com">vaultwarden@fizorr.com</a></p><p>更新日：2026年10月17日</p></footer>
+</main>
+</html>
